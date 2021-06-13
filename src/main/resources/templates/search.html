@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="no-outlines" xmlns:th="http://www.thymeleaf.org/" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+</head>
+<body>
+
+<div>
+<form method="GET" action="/search">
+<input type="text" name="q" placeholder="Search Employee">
+<button type="submit">Search</button>
+</form>
+</div>
+
+<div th:each="li : ${list}" style="background-color: skyblue;padding-left: 10px;padding-top: 2px">
+<h4 th:text="${li.id}"></h4>
+<p th:text="${li.name}"></p>
+<p th:text="${li.lastPresent}"></p>
+</div>
+<br>
+
+<body>
+</html>
